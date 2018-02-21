@@ -1,4 +1,4 @@
 # SistemaElectoral
-##Proyecto de Programación II - Sistema Electoral
+## Proyecto de Programación II - Sistema Electoral
 
-###Angel Antonio Torres Cálix - 10711163
+### Angel Antonio Torres Cálix - 10711163
