@@ -3,12 +3,13 @@
 ##Enero 2018
 ### Angel Antonio Torres Cálix - 10711163
 
-**El sistema consta de las siguientes Módulos:
-a-	Se espera que el sistema cuente con un buen diseño GUI, Amigable y entendible
+** El sistema consta de las siguientes Módulos:
 
-b-	Toda las parametrizaciónes e Información general o detallada debe estar guardada en archivos de texto, binarios y Bases de Datos. Es obligatorio que el proyecto contenga los tres tipos de almacenamiento
+1. Se espera que el sistema cuente con un buen diseño GUI, Amigable y entendible
 
-c-	Administración: dicho sistema está estructurado de la siguiente manera:
+2. Toda las parametrizaciónes e Información general o detallada debe estar guardada en archivos de texto, binarios y Bases de Datos. Es obligatorio que el proyecto contenga los tres tipos de almacenamiento
+
+3. Administración: dicho sistema está estructurado de la siguiente manera:
 1-	El sistema puede tener 4 tipos diferentes de usuarios:
 a-	Administrador del sistema
 b-	Miembro de mesa
