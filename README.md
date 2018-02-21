@@ -1,6 +1,6 @@
 # Sistema Electoral
 ## Proyecto de Programación II - Sistema Electoral
-##Enero 2018
+## Enero 2018
 ### Angel Antonio Torres Cálix - 10711163
 
 ** El sistema consta de las siguientes Módulos:

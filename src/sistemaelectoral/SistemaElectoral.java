@@ -1,5 +1,6 @@
 package sistemaelectoral;
 
+import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 
@@ -47,6 +48,11 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         bt_sexo = new javax.swing.ButtonGroup();
+        jd_admin = new javax.swing.JDialog();
+        jd_magister = new javax.swing.JDialog();
+        jd_votante = new javax.swing.JDialog();
+        jd_mesa = new javax.swing.JDialog();
+        jLabel12 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jm_archivo = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -200,8 +206,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(cb_depto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(cb_ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))))
+                                        .addComponent(cb_ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addGap(68, 68, 68))
         );
         jPanel1Layout.setVerticalGroup(
@@ -282,6 +287,66 @@ public class SistemaElectoral extends javax.swing.JFrame {
             .addGroup(jd_usuariosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane1))
+        );
+
+        jd_admin.setTitle("Administradores");
+
+        javax.swing.GroupLayout jd_adminLayout = new javax.swing.GroupLayout(jd_admin.getContentPane());
+        jd_admin.getContentPane().setLayout(jd_adminLayout);
+        jd_adminLayout.setHorizontalGroup(
+            jd_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 581, Short.MAX_VALUE)
+        );
+        jd_adminLayout.setVerticalGroup(
+            jd_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 372, Short.MAX_VALUE)
+        );
+
+        jd_magister.setTitle("Magistrados");
+
+        javax.swing.GroupLayout jd_magisterLayout = new javax.swing.GroupLayout(jd_magister.getContentPane());
+        jd_magister.getContentPane().setLayout(jd_magisterLayout);
+        jd_magisterLayout.setHorizontalGroup(
+            jd_magisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_magisterLayout.setVerticalGroup(
+            jd_magisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        jd_votante.setTitle("Votante");
+
+        javax.swing.GroupLayout jd_votanteLayout = new javax.swing.GroupLayout(jd_votante.getContentPane());
+        jd_votante.getContentPane().setLayout(jd_votanteLayout);
+        jd_votanteLayout.setHorizontalGroup(
+            jd_votanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_votanteLayout.setVerticalGroup(
+            jd_votanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        jd_mesa.setTitle("Miembro de Mesa");
+
+        jLabel12.setText("Aperturar Mesa");
+
+        javax.swing.GroupLayout jd_mesaLayout = new javax.swing.GroupLayout(jd_mesa.getContentPane());
+        jd_mesa.getContentPane().setLayout(jd_mesaLayout);
+        jd_mesaLayout.setHorizontalGroup(
+            jd_mesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_mesaLayout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(jLabel12)
+                .addContainerGap(446, Short.MAX_VALUE))
+        );
+        jd_mesaLayout.setVerticalGroup(
+            jd_mesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_mesaLayout.createSequentialGroup()
+                .addGap(74, 74, 74)
+                .addComponent(jLabel12)
+                .addContainerGap(258, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -393,6 +458,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -420,14 +486,20 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JButton jb_login;
+    private javax.swing.JDialog jd_admin;
     private javax.swing.JDialog jd_login;
+    private javax.swing.JDialog jd_magister;
+    private javax.swing.JDialog jd_mesa;
     private javax.swing.JDialog jd_usuarios;
+    private javax.swing.JDialog jd_votante;
     private javax.swing.JMenu jm_archivo;
     private javax.swing.JMenu jm_info;
     private javax.swing.JPasswordField jt_pwd;
     private javax.swing.JTextField jt_user;
     // End of variables declaration//GEN-END:variables
 
+    ArrayList<Contacto> contactos = new ArrayList();
+    
     final DefaultComboBoxModel atlantida
             = new DefaultComboBoxModel(new String[]{
         "Arizona", "El Porvenir", "Esparta", "Jutiapa", "La Ceiba",
