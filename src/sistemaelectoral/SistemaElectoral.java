@@ -498,7 +498,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JTextField jt_user;
     // End of variables declaration//GEN-END:variables
 
-    ArrayList<Contacto> contactos = new ArrayList();
+    ArrayList<Hondureno> contactos = new ArrayList();
     
     final DefaultComboBoxModel atlantida
             = new DefaultComboBoxModel(new String[]{
