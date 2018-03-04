@@ -50,8 +50,5 @@ public class MiembroMesa extends Usuario{
         return super.nombre + super.apellido;
     }
 
-    
-    
-    
 
 }

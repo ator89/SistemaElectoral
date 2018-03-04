@@ -1,6 +1,7 @@
 package sistemaelectoral;
 
 import hondureno.Hondureno;
+import hondureno.MiembroMesa;
 import hondureno.Usuario;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
@@ -54,12 +55,12 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         bt_sexo = new javax.swing.ButtonGroup();
-        jd_admin = new javax.swing.JDialog();
+        jd_adminOptions = new javax.swing.JDialog();
         jPanel4 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        bt_mmesa = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
@@ -273,7 +274,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
 
         jd_usuarios.getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 660, 410));
 
-        jd_admin.setTitle("Administradores");
+        jd_adminOptions.setTitle("Administradores");
 
         jButton2.setText("Papeletas");
 
@@ -281,7 +282,12 @@ public class SistemaElectoral extends javax.swing.JFrame {
 
         jButton4.setText("Magistrados");
 
-        jButton5.setText("Miembros de mesa");
+        bt_mmesa.setText("Miembros de mesa");
+        bt_mmesa.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_mmesaMouseClicked(evt);
+            }
+        });
 
         jButton6.setText("Electores");
 
@@ -301,7 +307,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
                             .addComponent(jButton7)
                             .addComponent(jButton4)
                             .addComponent(jButton3)
-                            .addComponent(jButton5)
+                            .addComponent(bt_mmesa)
                             .addComponent(jButton6))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
@@ -322,7 +328,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5)
+                .addComponent(bt_mmesa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -330,16 +336,16 @@ public class SistemaElectoral extends javax.swing.JFrame {
                 .addContainerGap(73, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jd_adminLayout = new javax.swing.GroupLayout(jd_admin.getContentPane());
-        jd_admin.getContentPane().setLayout(jd_adminLayout);
-        jd_adminLayout.setHorizontalGroup(
-            jd_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_adminLayout.createSequentialGroup()
+        javax.swing.GroupLayout jd_adminOptionsLayout = new javax.swing.GroupLayout(jd_adminOptions.getContentPane());
+        jd_adminOptions.getContentPane().setLayout(jd_adminOptionsLayout);
+        jd_adminOptionsLayout.setHorizontalGroup(
+            jd_adminOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_adminOptionsLayout.createSequentialGroup()
                 .addGap(0, 49, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-        jd_adminLayout.setVerticalGroup(
-            jd_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jd_adminOptionsLayout.setVerticalGroup(
+            jd_adminOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -511,6 +517,11 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jPanel8.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 150, -1));
 
         jButton10.setText("Guardar");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton10MouseClicked(evt);
+            }
+        });
         jPanel8.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, -1, -1));
 
         jLabel38.setText("Usuario:");
@@ -719,11 +730,29 @@ public class SistemaElectoral extends javax.swing.JFrame {
 
     private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
         
-        jd_admin.setModal(true);
-        jd_admin.setVisible(true);
-        
+        jd_adminOptions.setModal(true);
+        jd_adminOptions.pack();
+        jd_adminOptions.setLocationRelativeTo(this);
+        jd_adminOptions.setVisible(true);
         
     }//GEN-LAST:event_jButton11MouseClicked
+
+    private void bt_mmesaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_mmesaMouseClicked
+        
+        jd_miembros.setModal(true);
+        jd_miembros.pack();
+        jd_miembros.setLocationRelativeTo(this);
+        jd_miembros.setVisible(true);
+        
+        
+        
+    }//GEN-LAST:event_bt_mmesaMouseClicked
+
+    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+    
+        
+        
+    }//GEN-LAST:event_jButton10MouseClicked
 
     public void login(){
         if (tf_user.getText().equals(user)&&tf_pwd.getText().equals(pwd)){
@@ -768,6 +797,16 @@ public class SistemaElectoral extends javax.swing.JFrame {
         
     }
     
+    public void agregarMiembro(){
+        
+        String nombre, apellido, pwd, usuario;
+        String cargo;
+        
+        usuarios.add(new Usuario());
+                
+        
+    }
+    
     public void agregarElector(){
         
     }
@@ -805,6 +844,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bt_mmesa;
     private javax.swing.ButtonGroup bt_sexo;
     private javax.swing.JComboBox<String> cb_cargo;
     private javax.swing.JComboBox<String> cb_cargo1;
@@ -816,7 +856,6 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
@@ -896,7 +935,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JButton jb_login;
-    private javax.swing.JDialog jd_admin;
+    private javax.swing.JDialog jd_adminOptions;
     private javax.swing.JDialog jd_login;
     private javax.swing.JDialog jd_magister;
     private javax.swing.JDialog jd_mesa;
