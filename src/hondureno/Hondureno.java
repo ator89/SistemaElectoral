@@ -1,23 +1,19 @@
-
-
 package hondureno;
 
 import java.util.Date;
 
-
 public class Hondureno {
-    
-    protected String nombre, usuario, pwd,sexo,departamento,ciudad, direccion;
+
+    protected String nombre, apellido, sexo, departamento, ciudad, direccion;
     protected int id;
     protected Date nacimiento;
 
     public Hondureno() {
     }
 
-    public Hondureno(String nombre, String usuario, String pwd, String sexo, String departamento, String ciudad, String direccion, int id, Date nacimiento) {
+    public Hondureno(String nombre, String apellido, String sexo, String departamento, String ciudad, String direccion, int id, Date nacimiento) {
         this.nombre = nombre;
-        this.usuario = usuario;
-        this.pwd = pwd;
+        this.apellido = apellido;
         this.sexo = sexo;
         this.departamento = departamento;
         this.ciudad = ciudad;
@@ -34,20 +30,12 @@ public class Hondureno {
         this.nombre = nombre;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getApellido() {
+        return apellido;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getPwd() {
-        return pwd;
-    }
-
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public String getSexo() {
@@ -100,9 +88,9 @@ public class Hondureno {
 
     @Override
     public String toString() {
-        return "Hondureno{" + "nombre=" + nombre + ", usuario=" + usuario + ", pwd=" + pwd + ", sexo=" + sexo + ", departamento=" + departamento + ", ciudad=" + ciudad + ", direccion=" + direccion + ", id=" + id + ", nacimiento=" + nacimiento + '}';
+        return "Hondureno{" + "nombre=" + nombre + ", apellido=" + apellido + ", sexo=" + sexo + ", departamento=" + departamento + ", ciudad=" + ciudad + ", direccion=" + direccion + ", id=" + id + ", nacimiento=" + nacimiento + '}';
     }
-    
+
     
 
 }
