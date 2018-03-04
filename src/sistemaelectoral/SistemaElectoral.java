@@ -58,7 +58,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jd_adminOptions = new javax.swing.JDialog();
         jPanel4 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        bt_mesasAdmin = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         bt_mmesa = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
@@ -75,7 +75,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         jd_votante = new javax.swing.JDialog();
         jLabel23 = new javax.swing.JLabel();
-        jd_mesa = new javax.swing.JDialog();
+        jd_adminMesa = new javax.swing.JDialog();
         jPanel7 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
@@ -92,8 +92,8 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jButton10 = new javax.swing.JButton();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        tf_userMM = new javax.swing.JTextField();
+        tf_passMM = new javax.swing.JPasswordField();
         jLabel40 = new javax.swing.JLabel();
         cb_cargo = new javax.swing.JComboBox<>();
         jLabel41 = new javax.swing.JLabel();
@@ -110,6 +110,21 @@ public class SistemaElectoral extends javax.swing.JFrame {
         cb_cargo1 = new javax.swing.JComboBox<>();
         jLabel43 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
+        jd_mesas = new javax.swing.JDialog();
+        jPanel11 = new javax.swing.JPanel();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
+        jButton5 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jp_menu = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
@@ -278,7 +293,12 @@ public class SistemaElectoral extends javax.swing.JFrame {
 
         jButton2.setText("Papeletas");
 
-        jButton3.setText("Mesas");
+        bt_mesasAdmin.setText("Mesas");
+        bt_mesasAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_mesasAdminMouseClicked(evt);
+            }
+        });
 
         jButton4.setText("Magistrados");
 
@@ -306,7 +326,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton7)
                             .addComponent(jButton4)
-                            .addComponent(jButton3)
+                            .addComponent(bt_mesasAdmin)
                             .addComponent(bt_mmesa)
                             .addComponent(jButton6))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -324,7 +344,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
                     .addComponent(jButton2)
                     .addComponent(jButton8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
+                .addComponent(bt_mesasAdmin)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -438,7 +458,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
                 .addContainerGap(231, Short.MAX_VALUE))
         );
 
-        jd_mesa.setTitle("Miembro de Mesa");
+        jd_adminMesa.setTitle("Miembro de Mesa");
 
         jLabel12.setText("Aperturar Mesa");
 
@@ -490,18 +510,18 @@ public class SistemaElectoral extends javax.swing.JFrame {
                 .addContainerGap(78, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jd_mesaLayout = new javax.swing.GroupLayout(jd_mesa.getContentPane());
-        jd_mesa.getContentPane().setLayout(jd_mesaLayout);
-        jd_mesaLayout.setHorizontalGroup(
-            jd_mesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_mesaLayout.createSequentialGroup()
+        javax.swing.GroupLayout jd_adminMesaLayout = new javax.swing.GroupLayout(jd_adminMesa.getContentPane());
+        jd_adminMesa.getContentPane().setLayout(jd_adminMesaLayout);
+        jd_adminMesaLayout.setHorizontalGroup(
+            jd_adminMesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_adminMesaLayout.createSequentialGroup()
                 .addContainerGap(148, Short.MAX_VALUE)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
         );
-        jd_mesaLayout.setVerticalGroup(
-            jd_mesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_mesaLayout.createSequentialGroup()
+        jd_adminMesaLayout.setVerticalGroup(
+            jd_adminMesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_adminMesaLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(15, Short.MAX_VALUE))
@@ -529,8 +549,8 @@ public class SistemaElectoral extends javax.swing.JFrame {
 
         jLabel39.setText("Contraseña:");
         jPanel8.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, -1, -1));
-        jPanel8.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 87, 150, -1));
-        jPanel8.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 150, -1));
+        jPanel8.add(tf_userMM, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 87, 150, -1));
+        jPanel8.add(tf_passMM, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 150, -1));
 
         jLabel40.setText("Cargo:");
         jPanel8.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 136, -1, 20));
@@ -587,6 +607,126 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jTabbedPane2.addTab("Eliminar", jPanel10);
 
         jd_miembros.getContentPane().add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 620, 320));
+
+        jLabel35.setText("Código de Mesa:");
+
+        jLabel36.setText("Ubicación:");
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel36)
+                    .addComponent(jLabel35))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(325, Short.MAX_VALUE))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel35)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel36)
+                .addContainerGap(259, Short.MAX_VALUE))
+        );
+
+        jTabbedPane3.addTab("Agregar", jPanel12);
+
+        jLabel3.setText("Código Mesa:");
+
+        jLabel32.setText("Ubicación:");
+
+        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(jList2);
+
+        jButton5.setText("Editar");
+
+        jButton12.setText("Guardar");
+
+        jButton13.setText("Eliminar");
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel32)))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(jButton5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton13)))
+                .addContainerGap(44, Short.MAX_VALUE))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(31, Short.MAX_VALUE))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel32)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton5)
+                            .addComponent(jButton12)
+                            .addComponent(jButton13))
+                        .addGap(61, 61, 61))))
+        );
+
+        jTabbedPane3.addTab("Modificar", jPanel13);
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(101, Short.MAX_VALUE))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addContainerGap(41, Short.MAX_VALUE)
+                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jd_mesasLayout = new javax.swing.GroupLayout(jd_mesas.getContentPane());
+        jd_mesas.getContentPane().setLayout(jd_mesasLayout);
+        jd_mesasLayout.setHorizontalGroup(
+            jd_mesasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jd_mesasLayout.setVerticalGroup(
+            jd_mesasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema Electoral 0.01");
@@ -730,6 +870,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
 
     private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
         
+        //Opciones de aministradores
         jd_adminOptions.setModal(true);
         jd_adminOptions.pack();
         jd_adminOptions.setLocationRelativeTo(this);
@@ -739,6 +880,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
 
     private void bt_mmesaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_mmesaMouseClicked
         
+        //mostrar ventana de administración de miembros mesa
         jd_miembros.setModal(true);
         jd_miembros.pack();
         jd_miembros.setLocationRelativeTo(this);
@@ -750,9 +892,22 @@ public class SistemaElectoral extends javax.swing.JFrame {
 
     private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
     
-        
-        
+        //Agregar miembros de mesa
+        try{
+        agregarMiembro();
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(jd_miembros, "Ocurrió un error y no se guardó la información, intente de nuevo.");
+        }
     }//GEN-LAST:event_jButton10MouseClicked
+
+    private void bt_mesasAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_mesasAdminMouseClicked
+        
+        //administrar mesas
+        jd_mesas.setModal(true);
+        jd_mesas.pack();
+        jd_mesas.setLocationRelativeTo(jd_adminOptions);
+        jd_mesas.setVisible(true);
+    }//GEN-LAST:event_bt_mesasAdminMouseClicked
 
     public void login(){
         if (tf_user.getText().equals(user)&&tf_pwd.getText().equals(pwd)){
@@ -802,7 +957,18 @@ public class SistemaElectoral extends javax.swing.JFrame {
         String nombre, apellido, pwd, usuario;
         String cargo;
         
-        usuarios.add(new Usuario());
+        usuario = tf_userMM.getText();
+        pwd = tf_passMM.getText();
+        cargo = cb_cargo.getSelectedItem().toString();
+        
+        usuarios.add(new MiembroMesa(usuario, pwd, cargo));
+        
+        
+        tf_userMM.setText("");
+        tf_passMM.setText("");
+        cb_cargo.setSelectedIndex(0);
+        JOptionPane.showMessageDialog(jd_miembros, "Miembro de mesa agregado satisfactoriamente");
+        
                 
         
     }
@@ -844,6 +1010,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bt_mesasAdmin;
     private javax.swing.JButton bt_mmesa;
     private javax.swing.ButtonGroup bt_sexo;
     private javax.swing.JComboBox<String> cb_cargo;
@@ -853,9 +1020,11 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
@@ -884,10 +1053,14 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
@@ -901,10 +1074,14 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -914,15 +1091,16 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JPasswordField jPasswordField3;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
@@ -930,15 +1108,16 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JButton jb_login;
+    private javax.swing.JDialog jd_adminMesa;
     private javax.swing.JDialog jd_adminOptions;
     private javax.swing.JDialog jd_login;
     private javax.swing.JDialog jd_magister;
-    private javax.swing.JDialog jd_mesa;
+    private javax.swing.JDialog jd_mesas;
     private javax.swing.JDialog jd_miembros;
     private javax.swing.JDialog jd_usuarios;
     private javax.swing.JDialog jd_votante;
@@ -948,8 +1127,10 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmi_logout;
     private javax.swing.JMenuItem jmi_salir;
     private javax.swing.JPanel jp_menu;
+    private javax.swing.JPasswordField tf_passMM;
     private javax.swing.JPasswordField tf_pwd;
     private javax.swing.JTextField tf_user;
+    private javax.swing.JTextField tf_userMM;
     // End of variables declaration//GEN-END:variables
 
     String user="admin", pwd="123";

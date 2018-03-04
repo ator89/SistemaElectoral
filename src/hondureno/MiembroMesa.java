@@ -7,14 +7,20 @@ import java.util.Date;
 
 public class MiembroMesa extends Usuario{
     
-    private String usuario, pwd;
-    private int cargo;
+    private String usuario, pwd,cargo;
 
     public MiembroMesa() {
         super();
     }
 
-    public MiembroMesa(String user, String pwd, int cargo, String usuario, String password, String email, int tipo, String nombre, String apellido, String sexo, String departamento, String ciudad, String direccion, int id, Date nacimiento) {
+    public MiembroMesa(String usuario, String pwd, String cargo) {
+        this.usuario = usuario;
+        this.pwd = pwd;
+        this.cargo = cargo;
+    }
+
+    
+    public MiembroMesa(String user, String pwd, String cargo, String usuario, String password, String email, int tipo, String nombre, String apellido, String sexo, String departamento, String ciudad, String direccion, int id, Date nacimiento) {
         super(user, password, email, tipo, nombre, apellido, sexo, departamento, ciudad, direccion, id, nacimiento);
         this.usuario = usuario;
         this.pwd = pwd;
@@ -37,11 +43,11 @@ public class MiembroMesa extends Usuario{
         this.pwd = pwd;
     }
 
-    public int getCargo() {
+    public String getCargo() {
         return cargo;
     }
 
-    public void setCargo(int cargo) {
+    public void setCargo(String cargo) {
         this.cargo = cargo;
     }
 
