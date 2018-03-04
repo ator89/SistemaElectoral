@@ -5,6 +5,7 @@ import hondureno.MiembroMesa;
 import hondureno.Usuario;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
 public class SistemaElectoral extends javax.swing.JFrame {
@@ -25,6 +26,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
         tf_user = new javax.swing.JTextField();
         tf_pwd = new javax.swing.JPasswordField();
         jb_login = new javax.swing.JButton();
+        jLabel44 = new javax.swing.JLabel();
         jd_usuarios = new javax.swing.JDialog();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -57,13 +59,16 @@ public class SistemaElectoral extends javax.swing.JFrame {
         bt_sexo = new javax.swing.ButtonGroup();
         jd_adminOptions = new javax.swing.JDialog();
         jPanel4 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        bt_papel = new javax.swing.JButton();
         bt_mesasAdmin = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         bt_mmesa = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jMenuBar3 = new javax.swing.JMenuBar();
+        jMenu3 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
         jd_magister = new javax.swing.JDialog();
         jPanel6 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
@@ -76,14 +81,40 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jd_votante = new javax.swing.JDialog();
         jLabel23 = new javax.swing.JLabel();
         jd_adminMesa = new javax.swing.JDialog();
-        jPanel7 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
+        jp_mesasInicio = new javax.swing.JPanel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jp_mesasReporte = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jp_mesasAbrir = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jp_mesasMenu = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
+        jMenuBar4 = new javax.swing.JMenuBar();
+        jm_mesa = new javax.swing.JMenu();
+        jmi_mesaAbrir = new javax.swing.JMenuItem();
+        jmi_mesaCerrar = new javax.swing.JMenuItem();
+        jm_mesaEditar = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenu7 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
         jd_miembros = new javax.swing.JDialog();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel8 = new javax.swing.JPanel();
@@ -117,19 +148,37 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jLabel36 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jTextField12 = new javax.swing.JTextField();
+        jTextField13 = new javax.swing.JTextField();
         jPanel13 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList<>();
-        jButton5 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
+        jl_ME = new javax.swing.JList<>();
+        bt_editME = new javax.swing.JButton();
+        bt_saveME = new javax.swing.JButton();
+        cb_delME = new javax.swing.JButton();
+        jTextField7 = new javax.swing.JTextField();
+        jd_papeleta = new javax.swing.JDialog();
+        jp_presidente = new javax.swing.JPanel();
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jmi_addP = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jd_tipoPapeleta = new javax.swing.JDialog();
+        jPanel14 = new javax.swing.JPanel();
+        bt_okP = new javax.swing.JButton();
+        rb_alcalde = new javax.swing.JRadioButton();
+        rb_diputado = new javax.swing.JRadioButton();
+        rb_presidente = new javax.swing.JRadioButton();
+        jLabel37 = new javax.swing.JLabel();
+        btg_tipoP = new javax.swing.ButtonGroup();
         jPanel5 = new javax.swing.JPanel();
         jp_menu = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jButton11 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        bt_test = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -154,27 +203,36 @@ public class SistemaElectoral extends javax.swing.JFrame {
             }
         });
 
+        jLabel44.setText("Ingrese su usuario y contraseña:");
+
         javax.swing.GroupLayout jd_loginLayout = new javax.swing.GroupLayout(jd_login.getContentPane());
         jd_login.getContentPane().setLayout(jd_loginLayout);
         jd_loginLayout.setHorizontalGroup(
             jd_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_loginLayout.createSequentialGroup()
                 .addGap(42, 42, 42)
-                .addGroup(jd_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jd_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jb_login)
-                    .addGroup(jd_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(tf_user)
-                        .addComponent(tf_pwd, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)))
+                .addGroup(jd_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_loginLayout.createSequentialGroup()
+                        .addGroup(jd_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jd_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jb_login)
+                            .addGroup(jd_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(tf_user)
+                                .addComponent(tf_pwd, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE))))
+                    .addGroup(jd_loginLayout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(jLabel44)))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
         jd_loginLayout.setVerticalGroup(
             jd_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_loginLayout.createSequentialGroup()
-                .addGap(55, 55, 55)
+                .addGap(21, 21, 21)
+                .addComponent(jLabel44)
+                .addGap(18, 18, 18)
                 .addGroup(jd_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(tf_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -247,7 +305,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jLabel11.setText("Contraseña:");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, -1, -1));
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 87, 150, -1));
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 150, -1));
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 150, -1));
 
         jLabel30.setText("Tipo de Usuario:");
         jPanel1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, -1, -1));
@@ -265,11 +323,11 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 639, Short.MAX_VALUE)
+            .addGap(0, 649, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 364, Short.MAX_VALUE)
+            .addGap(0, 374, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Modificar", jPanel2);
@@ -278,20 +336,25 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 639, Short.MAX_VALUE)
+            .addGap(0, 649, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 364, Short.MAX_VALUE)
+            .addGap(0, 374, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Eliminar", jPanel3);
 
-        jd_usuarios.getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 660, 410));
+        jd_usuarios.getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 420));
 
         jd_adminOptions.setTitle("Administradores");
 
-        jButton2.setText("Papeletas");
+        bt_papel.setText("Papeletas");
+        bt_papel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_papelMouseClicked(evt);
+            }
+        });
 
         bt_mesasAdmin.setText("Mesas");
         bt_mesasAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -319,42 +382,47 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGap(96, 96, 96)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton7)
-                            .addComponent(jButton4)
-                            .addComponent(bt_mesasAdmin)
-                            .addComponent(bt_mmesa)
-                            .addComponent(jButton6))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
-                        .addComponent(jButton8)
-                        .addGap(79, 79, 79))))
+                    .addComponent(bt_papel)
+                    .addComponent(jButton7)
+                    .addComponent(bt_mesasAdmin))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton6)
+                    .addComponent(bt_mmesa)
+                    .addComponent(jButton8)
+                    .addComponent(jButton4))
+                .addGap(65, 65, 65))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(95, 95, 95)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
+                    .addComponent(bt_papel)
                     .addComponent(jButton8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bt_mesasAdmin)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bt_mesasAdmin)
+                    .addComponent(jButton4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bt_mmesa)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bt_mmesa)
+                    .addComponent(jButton7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton7)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
+
+        jMenu3.setText("Archivo");
+        jMenuBar3.add(jMenu3);
+
+        jMenu4.setText("Edit");
+        jMenuBar3.add(jMenu4);
+
+        jd_adminOptions.setJMenuBar(jMenuBar3);
 
         javax.swing.GroupLayout jd_adminOptionsLayout = new javax.swing.GroupLayout(jd_adminOptions.getContentPane());
         jd_adminOptions.getContentPane().setLayout(jd_adminOptionsLayout);
@@ -459,73 +527,125 @@ public class SistemaElectoral extends javax.swing.JFrame {
         );
 
         jd_adminMesa.setTitle("Miembro de Mesa");
+        jd_adminMesa.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel12.setText("Aperturar Mesa");
+        jp_mesasInicio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel45.setText("Bienvenido a la administración de Mesas Electorales ");
+        jp_mesasInicio.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, -1, -1));
+
+        jLabel46.setText("Abrir Mesa Electoral");
+        jp_mesasInicio.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 118, -1, -1));
+
+        jLabel47.setText("Cerrar Mesa Electoral");
+        jp_mesasInicio.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 140, -1, -1));
+
+        jLabel48.setText("Habilitar Elector");
+        jp_mesasInicio.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 174, -1, -1));
+
+        jLabel49.setText("Reporte de Mesas Electorales");
+        jp_mesasInicio.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 118, -1, -1));
+
+        jLabel50.setText("Generar Actas");
+        jp_mesasInicio.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, -1, -1));
+
+        jLabel51.setText("Ubicación");
+        jp_mesasInicio.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 174, -1, -1));
+
+        jd_adminMesa.getContentPane().add(jp_mesasInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, 480, 340));
+
+        jp_mesasReporte.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton2.setText("Presidente");
+        jp_mesasReporte.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, -1));
+
+        jButton5.setText("Diputado");
+        jp_mesasReporte.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, -1));
+
+        jButton12.setText("Alcalde");
+        jp_mesasReporte.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, -1, -1));
+
+        jd_adminMesa.getContentPane().add(jp_mesasReporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, 480, 340));
+
+        jp_mesasAbrir.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel24.setText("Cerrar Mesa");
-
-        jLabel25.setText("Habilitar Votante");
-
-        jLabel26.setText("Personas que han votado");
-
-        jLabel27.setText("Reporte de mesas");
+        jp_mesasAbrir.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 295, -1, -1));
 
         jLabel28.setText("Generar acta e imprimir");
+        jp_mesasAbrir.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 202, -1, -1));
 
         jLabel29.setText("Ver ubicación de mesa");
+        jp_mesasAbrir.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 236, -1, -1));
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel29)
-                    .addComponent(jLabel28)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel24)
-                    .addComponent(jLabel25)
-                    .addComponent(jLabel26)
-                    .addComponent(jLabel27))
-                .addContainerGap(267, Short.MAX_VALUE))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jLabel12)
-                .addGap(42, 42, 42)
-                .addComponent(jLabel24)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel25)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel26)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel27)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel28)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel29)
-                .addContainerGap(78, Short.MAX_VALUE))
-        );
+        jd_adminMesa.getContentPane().add(jp_mesasAbrir, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 0, 480, 340));
 
-        javax.swing.GroupLayout jd_adminMesaLayout = new javax.swing.GroupLayout(jd_adminMesa.getContentPane());
-        jd_adminMesa.getContentPane().setLayout(jd_adminMesaLayout);
-        jd_adminMesaLayout.setHorizontalGroup(
-            jd_adminMesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_adminMesaLayout.createSequentialGroup()
-                .addContainerGap(148, Short.MAX_VALUE)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
-        );
-        jd_adminMesaLayout.setVerticalGroup(
-            jd_adminMesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_adminMesaLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
-        );
+        jp_mesasMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel12.setText("Aperturar Mesa");
+        jp_mesasMenu.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 66, -1, -1));
+
+        jLabel25.setText("Habilitar Votante");
+        jp_mesasMenu.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 114, -1, -1));
+
+        jLabel26.setText("Lista de votantes");
+        jp_mesasMenu.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 148, -1, -1));
+
+        jLabel27.setText("Reporte de mesas");
+        jp_mesasMenu.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+
+        jd_adminMesa.getContentPane().add(jp_mesasMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 338));
+
+        jm_mesa.setText("Archivo");
+
+        jmi_mesaAbrir.setText("Abrir Mesa");
+        jmi_mesaAbrir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_mesaAbrirActionPerformed(evt);
+            }
+        });
+        jm_mesa.add(jmi_mesaAbrir);
+
+        jmi_mesaCerrar.setText("Cerrar Mesa");
+        jmi_mesaCerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_mesaCerrarActionPerformed(evt);
+            }
+        });
+        jm_mesa.add(jmi_mesaCerrar);
+
+        jMenuBar4.add(jm_mesa);
+
+        jm_mesaEditar.setText("Editar");
+
+        jMenuItem1.setText("Habilitar Elector");
+        jm_mesaEditar.add(jMenuItem1);
+
+        jMenuItem2.setText("Informe de Electores");
+        jm_mesaEditar.add(jMenuItem2);
+
+        jMenu7.setText("Resultados de Mesa");
+
+        jMenuItem3.setText("Presidente");
+        jMenu7.add(jMenuItem3);
+
+        jMenuItem5.setText("Diputado");
+        jMenu7.add(jMenuItem5);
+
+        jMenuItem6.setText("Alcalde");
+        jMenu7.add(jMenuItem6);
+
+        jm_mesaEditar.add(jMenu7);
+
+        jMenuItem7.setText("Generar Actas");
+        jm_mesaEditar.add(jMenuItem7);
+
+        jMenuItem8.setText("Ubicación de Mesa Electoral");
+        jm_mesaEditar.add(jMenuItem8);
+
+        jMenuBar4.add(jm_mesaEditar);
+
+        jd_adminMesa.setJMenuBar(jMenuBar4);
 
         jd_miembros.setTitle("Miembros de Mesa");
         jd_miembros.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -556,7 +676,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jPanel8.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 136, -1, 20));
 
         cb_cargo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar...", "Presidente", "Secretario", "Vocal" }));
-        jPanel8.add(cb_cargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, -1, -1));
+        jPanel8.add(cb_cargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, -1, -1));
 
         jLabel41.setText("Apellido:");
         jPanel8.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, -1, 20));
@@ -610,20 +730,36 @@ public class SistemaElectoral extends javax.swing.JFrame {
 
         jLabel35.setText("Código de Mesa:");
 
+        jTextField5.setToolTipText("Código de Mesa Electoral");
+
         jLabel36.setText("Ubicación:");
+
+        jButton3.setText("Guardar");
+        jButton3.setToolTipText("Guardar cambios");
+
+        jTextField12.setToolTipText("Latitud");
+
+        jTextField13.setToolTipText("Longitud");
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                .addContainerGap(328, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(141, 141, 141))
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel36)
                     .addComponent(jLabel35))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(325, Short.MAX_VALUE))
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                    .addComponent(jTextField12)
+                    .addComponent(jTextField13))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -633,8 +769,14 @@ public class SistemaElectoral extends javax.swing.JFrame {
                     .addComponent(jLabel35)
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel36)
-                .addContainerGap(259, Short.MAX_VALUE))
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64)
+                .addComponent(jButton3)
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Agregar", jPanel12);
@@ -643,18 +785,16 @@ public class SistemaElectoral extends javax.swing.JFrame {
 
         jLabel32.setText("Ubicación:");
 
-        jList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane3.setViewportView(jList2);
+        jl_ME.setModel(new DefaultListModel());
+        jScrollPane3.setViewportView(jl_ME);
 
-        jButton5.setText("Editar");
+        bt_editME.setText("Editar");
 
-        jButton12.setText("Guardar");
+        bt_saveME.setText("Guardar");
 
-        jButton13.setText("Eliminar");
+        cb_delME.setText("Eliminar");
+
+        jTextField7.setEnabled(false);
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -668,33 +808,37 @@ public class SistemaElectoral extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel3)
-                            .addComponent(jLabel32)))
+                            .addComponent(jLabel32))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addGap(49, 49, 49)
-                        .addComponent(jButton5)
+                        .addComponent(bt_editME)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton12)
+                        .addComponent(bt_saveME)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton13)))
+                        .addComponent(cb_delME)))
                 .addContainerGap(44, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
-                .addGap(37, 37, 37)
+                .addGap(32, 32, 32)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(31, Short.MAX_VALUE))
+                        .addContainerGap(36, Short.MAX_VALUE))
                     .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel32)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton5)
-                            .addComponent(jButton12)
-                            .addComponent(jButton13))
+                            .addComponent(bt_editME)
+                            .addComponent(bt_saveME)
+                            .addComponent(cb_delME))
                         .addGap(61, 61, 61))))
         );
 
@@ -726,6 +870,113 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jd_mesasLayout.setVerticalGroup(
             jd_mesasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jd_papeleta.setTitle("Papeletas");
+
+        javax.swing.GroupLayout jp_presidenteLayout = new javax.swing.GroupLayout(jp_presidente);
+        jp_presidente.setLayout(jp_presidenteLayout);
+        jp_presidenteLayout.setHorizontalGroup(
+            jp_presidenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+        );
+        jp_presidenteLayout.setVerticalGroup(
+            jp_presidenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 360, Short.MAX_VALUE)
+        );
+
+        jMenu1.setText("Administrar");
+
+        jmi_addP.setText("Agregar");
+        jmi_addP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_addPActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jmi_addP);
+
+        jMenuBar2.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar2.add(jMenu2);
+
+        jd_papeleta.setJMenuBar(jMenuBar2);
+
+        javax.swing.GroupLayout jd_papeletaLayout = new javax.swing.GroupLayout(jd_papeleta.getContentPane());
+        jd_papeleta.getContentPane().setLayout(jd_papeletaLayout);
+        jd_papeletaLayout.setHorizontalGroup(
+            jd_papeletaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jp_presidente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jd_papeletaLayout.setVerticalGroup(
+            jd_papeletaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jp_presidente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jd_tipoPapeleta.setTitle("Tipo de Papeleta");
+
+        bt_okP.setText("Aceptar");
+
+        btg_tipoP.add(rb_alcalde);
+        rb_alcalde.setText("Alcalde");
+
+        btg_tipoP.add(rb_diputado);
+        rb_diputado.setText("Diputado");
+
+        btg_tipoP.add(rb_presidente);
+        rb_presidente.setText("Presidente");
+
+        jLabel37.setText("¿Qué tipo de papeleta desea administrar?");
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rb_diputado)
+                    .addComponent(rb_presidente)
+                    .addComponent(rb_alcalde))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addComponent(bt_okP)
+                .addGap(90, 90, 90))
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jLabel37)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel37)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                        .addComponent(bt_okP)
+                        .addGap(25, 25, 25))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                        .addComponent(rb_presidente)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rb_diputado)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rb_alcalde)
+                        .addGap(14, 14, 14))))
+        );
+
+        javax.swing.GroupLayout jd_tipoPapeletaLayout = new javax.swing.GroupLayout(jd_tipoPapeleta.getContentPane());
+        jd_tipoPapeleta.getContentPane().setLayout(jd_tipoPapeletaLayout);
+        jd_tipoPapeletaLayout.setHorizontalGroup(
+            jd_tipoPapeletaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_tipoPapeletaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jd_tipoPapeletaLayout.setVerticalGroup(
+            jd_tipoPapeletaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -769,11 +1020,16 @@ public class SistemaElectoral extends javax.swing.JFrame {
 
         jPanel5.add(jp_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 310, 270, 220));
 
-        jButton9.setText("jButton9");
-        jPanel5.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, -1, -1));
+        bt_test.setText("TEST");
+        bt_test.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_testMouseClicked(evt);
+            }
+        });
+        jPanel5.add(bt_test, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, -1, -1));
 
-        jLabel16.setText("jLabel16");
-        jPanel5.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, -1, -1));
+        jLabel16.setText("Prueba de funciones de los demás usuarios");
+        jPanel5.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bg_hn_900x529.png"))); // NOI18N
         jPanel5.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 540));
@@ -909,6 +1165,72 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jd_mesas.setVisible(true);
     }//GEN-LAST:event_bt_mesasAdminMouseClicked
 
+    private void jmi_addPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_addPActionPerformed
+        
+        //seleccionar tipo papeleta
+        jd_tipoPapeleta.setModal(true);
+        jd_tipoPapeleta.pack();
+        jd_tipoPapeleta.setLocationRelativeTo(jd_papeleta);
+        jd_tipoPapeleta.setVisible(true);
+    }//GEN-LAST:event_jmi_addPActionPerformed
+
+    private void bt_papelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_papelMouseClicked
+        
+        //abrir ventana de administración de papeletas
+        jd_papeleta.setModal(true);
+        jd_papeleta.pack();
+        jd_papeleta.setLocationRelativeTo(jd_adminOptions);
+        jd_papeleta.setVisible(true);
+        jp_presidente.setVisible(false);
+        
+    }//GEN-LAST:event_bt_papelMouseClicked
+
+    private void bt_testMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_testMouseClicked
+        
+        //Esconder paneles dinámicos
+        jp_mesasAbrir.setVisible(false);
+        jp_mesasReporte.setVisible(false);
+        jp_mesasMenu.setVisible(false);
+        jmi_mesaCerrar.setVisible(false);
+        jm_mesaEditar.setEnabled(false);
+        
+        
+        //Abrir administrador de mesas electorales
+        jd_adminMesa.setModal(true);
+        jd_adminMesa.pack();
+        jd_adminMesa.setLocationRelativeTo(this);
+        jd_adminMesa.setVisible(true);
+        
+        
+        
+        
+    }//GEN-LAST:event_bt_testMouseClicked
+
+    private void jmi_mesaAbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_mesaAbrirActionPerformed
+        
+        jm_mesaEditar.setEnabled(true);
+        jmi_mesaAbrir.setEnabled(false);
+        jmi_mesaCerrar.setVisible(true);
+        
+        jp_mesasAbrir.setVisible(true);
+        jp_mesasReporte.setVisible(false);
+        jp_mesasInicio.setVisible(false);
+        jp_mesasMenu.setVisible(true);
+        
+    }//GEN-LAST:event_jmi_mesaAbrirActionPerformed
+
+    private void jmi_mesaCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_mesaCerrarActionPerformed
+        
+        jm_mesaEditar.setEnabled(false);
+        jmi_mesaAbrir.setEnabled(true);
+        jmi_mesaCerrar.setVisible(false);
+        
+        jp_mesasAbrir.setVisible(false);
+        jp_mesasReporte.setVisible(false);
+        jp_mesasInicio.setVisible(true);
+        jp_mesasMenu.setVisible(false);
+    }//GEN-LAST:event_jmi_mesaCerrarActionPerformed
+
     public void login(){
         if (tf_user.getText().equals(user)&&tf_pwd.getText().equals(pwd)){
             jp_menu.setVisible(true);
@@ -1010,25 +1332,31 @@ public class SistemaElectoral extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bt_editME;
     private javax.swing.JButton bt_mesasAdmin;
     private javax.swing.JButton bt_mmesa;
+    private javax.swing.JButton bt_okP;
+    private javax.swing.JButton bt_papel;
+    private javax.swing.JButton bt_saveME;
     private javax.swing.ButtonGroup bt_sexo;
+    private javax.swing.JButton bt_test;
+    private javax.swing.ButtonGroup btg_tipoP;
     private javax.swing.JComboBox<String> cb_cargo;
     private javax.swing.JComboBox<String> cb_cargo1;
     private javax.swing.JComboBox<String> cb_ciudad;
+    private javax.swing.JButton cb_delME;
     private javax.swing.JComboBox<String> cb_depto;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
@@ -1061,6 +1389,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
@@ -1068,26 +1397,48 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
-    private javax.swing.JList<String> jList2;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenuBar jMenuBar3;
+    private javax.swing.JMenuBar jMenuBar4;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPasswordField jPasswordField1;
@@ -1105,11 +1456,14 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JButton jb_login;
@@ -1119,14 +1473,30 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JDialog jd_magister;
     private javax.swing.JDialog jd_mesas;
     private javax.swing.JDialog jd_miembros;
+    private javax.swing.JDialog jd_papeleta;
+    private javax.swing.JDialog jd_tipoPapeleta;
     private javax.swing.JDialog jd_usuarios;
     private javax.swing.JDialog jd_votante;
+    private javax.swing.JList<String> jl_ME;
     private javax.swing.JMenu jm_archivo;
     private javax.swing.JMenu jm_info;
+    private javax.swing.JMenu jm_mesa;
+    private javax.swing.JMenu jm_mesaEditar;
+    private javax.swing.JMenuItem jmi_addP;
     private javax.swing.JMenuItem jmi_login;
     private javax.swing.JMenuItem jmi_logout;
+    private javax.swing.JMenuItem jmi_mesaAbrir;
+    private javax.swing.JMenuItem jmi_mesaCerrar;
     private javax.swing.JMenuItem jmi_salir;
     private javax.swing.JPanel jp_menu;
+    private javax.swing.JPanel jp_mesasAbrir;
+    private javax.swing.JPanel jp_mesasInicio;
+    private javax.swing.JPanel jp_mesasMenu;
+    private javax.swing.JPanel jp_mesasReporte;
+    private javax.swing.JPanel jp_presidente;
+    private javax.swing.JRadioButton rb_alcalde;
+    private javax.swing.JRadioButton rb_diputado;
+    private javax.swing.JRadioButton rb_presidente;
     private javax.swing.JPasswordField tf_passMM;
     private javax.swing.JPasswordField tf_pwd;
     private javax.swing.JTextField tf_user;
