@@ -8,6 +8,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
 
     public SistemaElectoral() {
         initComponents();
+        setLocationRelativeTo(this);
     }
 
     @SuppressWarnings("unchecked")
@@ -49,6 +50,14 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         bt_sexo = new javax.swing.ButtonGroup();
         jd_admin = new javax.swing.JDialog();
+        jPanel4 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
         jd_magister = new javax.swing.JDialog();
         jd_votante = new javax.swing.JDialog();
         jd_mesa = new javax.swing.JDialog();
@@ -200,13 +209,12 @@ public class SistemaElectoral extends javax.swing.JFrame {
                                     .addComponent(jLabel6))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(cb_depto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(cb_ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                        .addComponent(cb_ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addGap(68, 68, 68))
         );
         jPanel1Layout.setVerticalGroup(
@@ -291,15 +299,72 @@ public class SistemaElectoral extends javax.swing.JFrame {
 
         jd_admin.setTitle("Administradores");
 
+        jButton2.setText("Papeletas");
+
+        jButton3.setText("Mesas");
+
+        jButton4.setText("Magistrados");
+
+        jButton5.setText("Miembros de mesa");
+
+        jButton6.setText("Electores");
+
+        jButton7.setText("Reportes");
+
+        jButton8.setText("Administradores");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(96, 96, 96)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton7)
+                            .addComponent(jButton4)
+                            .addComponent(jButton3)
+                            .addComponent(jButton5)
+                            .addComponent(jButton6))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                        .addComponent(jButton8)
+                        .addGap(79, 79, 79))))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(95, 95, 95)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton7)
+                .addContainerGap(73, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jd_adminLayout = new javax.swing.GroupLayout(jd_admin.getContentPane());
         jd_admin.getContentPane().setLayout(jd_adminLayout);
         jd_adminLayout.setHorizontalGroup(
             jd_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 581, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_adminLayout.createSequentialGroup()
+                .addGap(0, 49, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jd_adminLayout.setVerticalGroup(
             jd_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 372, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jd_magister.setTitle("Magistrados");
@@ -454,6 +519,13 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cb_depto;
     private javax.swing.JComboBox<String> cb_perfil;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -475,6 +547,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
@@ -504,17 +577,20 @@ public class SistemaElectoral extends javax.swing.JFrame {
             = new DefaultComboBoxModel(new String[]{
         "Arizona", "El Porvenir", "Esparta", "Jutiapa", "La Ceiba",
         "La Masica", "San Francisco", "Tela"});
+    
     final DefaultComboBoxModel choluteca
             = new DefaultComboBoxModel(new String[]{
         "Apacilagua", "Choluteca", "Concepción de María", "Duyure",
         "El Corpus", "El Triunfo", "Marcovia", "Morolica", "Namasigue",
         "Orocuina", "Pespire", "San Antonio de Flores", "San Isidro",
         "San José", "San Marcos de Colón", "Santa Ana de Yusguare"});
+    
     final DefaultComboBoxModel colon
             = new DefaultComboBoxModel(new String[]{
         "Balfate", "Bonito Oriental", "Iriona", "Limón", "Sabá",
         "Santa Fé", "Santa Rosa de Aguán", "Sonaguera", "Tocoa",
         "Trujillo"});
+    
     final DefaultComboBoxModel comayagua
             = new DefaultComboBoxModel(new String[]{
         "Ajuterique", "Comayagua", "El Rosario", "Esquías", "Humuya",
