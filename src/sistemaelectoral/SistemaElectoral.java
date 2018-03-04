@@ -66,6 +66,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
         jMenuBar3 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
@@ -161,11 +162,25 @@ public class SistemaElectoral extends javax.swing.JFrame {
         cb_delME = new javax.swing.JButton();
         jTextField7 = new javax.swing.JTextField();
         jd_papeleta = new javax.swing.JDialog();
-        jp_presidente = new javax.swing.JPanel();
+        jp_papeletaDefault = new javax.swing.JPanel();
+        jLabel55 = new javax.swing.JLabel();
+        jp_papeletaPresi = new javax.swing.JPanel();
+        jLabel52 = new javax.swing.JLabel();
+        jp_papeletaDipu = new javax.swing.JPanel();
+        jLabel54 = new javax.swing.JLabel();
+        jp_papeletaAlca = new javax.swing.JPanel();
+        jLabel53 = new javax.swing.JLabel();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jmi_addP = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        jm_adminPapeleta = new javax.swing.JMenu();
+        jmi_adminPpresidente = new javax.swing.JMenuItem();
+        jmi_adminPalca = new javax.swing.JMenuItem();
+        jmi_adminPdipu = new javax.swing.JMenuItem();
+        jmi_adminPapeletaAdm = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        jmi_adminPapeletaClose = new javax.swing.JMenuItem();
+        jm_papeletaEdit = new javax.swing.JMenu();
         jd_tipoPapeleta = new javax.swing.JDialog();
         jPanel14 = new javax.swing.JPanel();
         bt_okP = new javax.swing.JButton();
@@ -347,7 +362,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
 
         jd_usuarios.getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 420));
 
-        jd_adminOptions.setTitle("Administradores");
+        jd_adminOptions.setTitle("Opciones Administrativas");
 
         bt_papel.setText("Papeletas");
         bt_papel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -378,6 +393,8 @@ public class SistemaElectoral extends javax.swing.JFrame {
 
         jButton8.setText("Administradores");
 
+        jButton9.setText("Usuarios");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -387,8 +404,9 @@ public class SistemaElectoral extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_papel)
                     .addComponent(jButton7)
-                    .addComponent(bt_mesasAdmin))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                    .addComponent(bt_mesasAdmin)
+                    .addComponent(jButton9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton6)
                     .addComponent(bt_mmesa)
@@ -412,7 +430,9 @@ public class SistemaElectoral extends javax.swing.JFrame {
                     .addComponent(bt_mmesa)
                     .addComponent(jButton7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton6)
+                    .addComponent(jButton9))
                 .addContainerGap(121, Short.MAX_VALUE))
         );
 
@@ -429,7 +449,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jd_adminOptionsLayout.setHorizontalGroup(
             jd_adminOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_adminOptionsLayout.createSequentialGroup()
-                .addGap(0, 49, Short.MAX_VALUE)
+                .addGap(0, 72, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jd_adminOptionsLayout.setVerticalGroup(
@@ -873,45 +893,83 @@ public class SistemaElectoral extends javax.swing.JFrame {
         );
 
         jd_papeleta.setTitle("Papeletas");
+        jd_papeleta.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jp_presidenteLayout = new javax.swing.GroupLayout(jp_presidente);
-        jp_presidente.setLayout(jp_presidenteLayout);
-        jp_presidenteLayout.setHorizontalGroup(
-            jp_presidenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-        jp_presidenteLayout.setVerticalGroup(
-            jp_presidenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 360, Short.MAX_VALUE)
-        );
+        jp_papeletaDefault.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel55.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel55.setText("Creación y Administración de Papeletas Electorales");
+        jp_papeletaDefault.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, -1, -1));
+
+        jd_papeleta.getContentPane().add(jp_papeletaDefault, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 360));
+
+        jp_papeletaPresi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel52.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel52.setText("Papeletas para Presidente");
+        jp_papeletaPresi.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, -1, -1));
+
+        jd_papeleta.getContentPane().add(jp_papeletaPresi, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 360));
+
+        jp_papeletaDipu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel54.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel54.setText("Papeleta para Diputados");
+        jp_papeletaDipu.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, -1, -1));
+
+        jd_papeleta.getContentPane().add(jp_papeletaDipu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 360));
+
+        jp_papeletaAlca.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel53.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel53.setText("Papeleta para Alcade");
+        jp_papeletaAlca.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, -1, -1));
+
+        jd_papeleta.getContentPane().add(jp_papeletaAlca, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 360));
 
         jMenu1.setText("Administrar");
 
-        jmi_addP.setText("Agregar");
-        jmi_addP.addActionListener(new java.awt.event.ActionListener() {
+        jm_adminPapeleta.setText("Nueva Papeleta");
+
+        jmi_adminPpresidente.setText("Presidente");
+        jmi_adminPpresidente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmi_addPActionPerformed(evt);
+                jmi_adminPpresidenteActionPerformed(evt);
             }
         });
-        jMenu1.add(jmi_addP);
+        jm_adminPapeleta.add(jmi_adminPpresidente);
+
+        jmi_adminPalca.setText("Alcalde");
+        jm_adminPapeleta.add(jmi_adminPalca);
+
+        jmi_adminPdipu.setText("Diputado");
+        jm_adminPapeleta.add(jmi_adminPdipu);
+
+        jMenu1.add(jm_adminPapeleta);
+
+        jmi_adminPapeletaAdm.setText("Administrar");
+        jmi_adminPapeletaAdm.setEnabled(false);
+        jmi_adminPapeletaAdm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_adminPapeletaAdmActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jmi_adminPapeletaAdm);
+
+        jMenuItem9.setText("jMenuItem9");
+        jMenu1.add(jMenuItem9);
+        jMenu1.add(jSeparator2);
+
+        jmi_adminPapeletaClose.setText("Cerrar");
+        jMenu1.add(jmi_adminPapeletaClose);
 
         jMenuBar2.add(jMenu1);
 
-        jMenu2.setText("Edit");
-        jMenuBar2.add(jMenu2);
+        jm_papeletaEdit.setText("Editar");
+        jm_papeletaEdit.setEnabled(false);
+        jMenuBar2.add(jm_papeletaEdit);
 
         jd_papeleta.setJMenuBar(jMenuBar2);
-
-        javax.swing.GroupLayout jd_papeletaLayout = new javax.swing.GroupLayout(jd_papeleta.getContentPane());
-        jd_papeleta.getContentPane().setLayout(jd_papeletaLayout);
-        jd_papeletaLayout.setHorizontalGroup(
-            jd_papeletaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_presidente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jd_papeletaLayout.setVerticalGroup(
-            jd_papeletaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_presidente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
 
         jd_tipoPapeleta.setTitle("Tipo de Papeleta");
 
@@ -1165,29 +1223,35 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jd_mesas.setVisible(true);
     }//GEN-LAST:event_bt_mesasAdminMouseClicked
 
-    private void jmi_addPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_addPActionPerformed
+    private void jmi_adminPapeletaAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_adminPapeletaAdmActionPerformed
         
         //seleccionar tipo papeleta
         jd_tipoPapeleta.setModal(true);
         jd_tipoPapeleta.pack();
         jd_tipoPapeleta.setLocationRelativeTo(jd_papeleta);
         jd_tipoPapeleta.setVisible(true);
-    }//GEN-LAST:event_jmi_addPActionPerformed
+    }//GEN-LAST:event_jmi_adminPapeletaAdmActionPerformed
 
     private void bt_papelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_papelMouseClicked
+
+        //Administrar Paneles dinámicos
+        jp_papeletaDefault.setVisible(true);
+        jp_papeletaPresi.setVisible(false);
+        jp_papeletaAlca.setVisible(false);
+        jp_papeletaDipu.setVisible(false);
         
         //abrir ventana de administración de papeletas
         jd_papeleta.setModal(true);
         jd_papeleta.pack();
         jd_papeleta.setLocationRelativeTo(jd_adminOptions);
         jd_papeleta.setVisible(true);
-        jp_presidente.setVisible(false);
+        
         
     }//GEN-LAST:event_bt_papelMouseClicked
 
     private void bt_testMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_testMouseClicked
         
-        //Esconder paneles dinámicos
+        //Administrar paneles dinámicos
         jp_mesasAbrir.setVisible(false);
         jp_mesasReporte.setVisible(false);
         jp_mesasMenu.setVisible(false);
@@ -1230,6 +1294,26 @@ public class SistemaElectoral extends javax.swing.JFrame {
         jp_mesasInicio.setVisible(true);
         jp_mesasMenu.setVisible(false);
     }//GEN-LAST:event_jmi_mesaCerrarActionPerformed
+
+    private void jmi_adminPpresidenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_adminPpresidenteActionPerformed
+        
+        //Administrar Paneles dinámicos
+        jp_papeletaDefault.setVisible(false);
+        jp_papeletaPresi.setVisible(true);
+        jp_papeletaAlca.setVisible(false);
+        jp_papeletaDipu.setVisible(false);
+        
+        //Mostrar menu
+        jmi_adminPapeletaAdm.setEnabled(true);
+        
+        
+        //abrir ventana de administración de papeletas
+        jd_papeleta.setModal(true);
+        jd_papeleta.pack();
+        jd_papeleta.setLocationRelativeTo(jd_adminOptions);
+        jd_papeleta.setVisible(true);
+        
+    }//GEN-LAST:event_jmi_adminPpresidenteActionPerformed
 
     public void login(){
         if (tf_user.getText().equals(user)&&tf_pwd.getText().equals(pwd)){
@@ -1357,6 +1441,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
@@ -1406,13 +1491,16 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu7;
@@ -1428,6 +1516,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -1449,6 +1538,7 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
@@ -1478,11 +1568,17 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JDialog jd_usuarios;
     private javax.swing.JDialog jd_votante;
     private javax.swing.JList<String> jl_ME;
+    private javax.swing.JMenu jm_adminPapeleta;
     private javax.swing.JMenu jm_archivo;
     private javax.swing.JMenu jm_info;
     private javax.swing.JMenu jm_mesa;
     private javax.swing.JMenu jm_mesaEditar;
-    private javax.swing.JMenuItem jmi_addP;
+    private javax.swing.JMenu jm_papeletaEdit;
+    private javax.swing.JMenuItem jmi_adminPalca;
+    private javax.swing.JMenuItem jmi_adminPapeletaAdm;
+    private javax.swing.JMenuItem jmi_adminPapeletaClose;
+    private javax.swing.JMenuItem jmi_adminPdipu;
+    private javax.swing.JMenuItem jmi_adminPpresidente;
     private javax.swing.JMenuItem jmi_login;
     private javax.swing.JMenuItem jmi_logout;
     private javax.swing.JMenuItem jmi_mesaAbrir;
@@ -1493,7 +1589,10 @@ public class SistemaElectoral extends javax.swing.JFrame {
     private javax.swing.JPanel jp_mesasInicio;
     private javax.swing.JPanel jp_mesasMenu;
     private javax.swing.JPanel jp_mesasReporte;
-    private javax.swing.JPanel jp_presidente;
+    private javax.swing.JPanel jp_papeletaAlca;
+    private javax.swing.JPanel jp_papeletaDefault;
+    private javax.swing.JPanel jp_papeletaDipu;
+    private javax.swing.JPanel jp_papeletaPresi;
     private javax.swing.JRadioButton rb_alcalde;
     private javax.swing.JRadioButton rb_diputado;
     private javax.swing.JRadioButton rb_presidente;
