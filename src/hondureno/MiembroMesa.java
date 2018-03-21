@@ -5,50 +5,15 @@ package hondureno;
 import java.util.Date;
 
 
-public class MiembroMesa extends Usuario{
+public class MiembroMesa extends Hondureno{
     
-    private String usuario, pwd,cargo;
 
     public MiembroMesa() {
         super();
     }
 
-    public MiembroMesa(String usuario, String pwd, String cargo) {
-        this.usuario = usuario;
-        this.pwd = pwd;
-        this.cargo = cargo;
-    }
-
-    
-    public MiembroMesa(String user, String pwd, String cargo, String usuario, String password, String email, int tipo, String nombre, String apellido, String sexo, String departamento, String ciudad, String direccion, int id, Date nacimiento) {
-        super(user, password, email, tipo, nombre, apellido, sexo, departamento, ciudad, direccion, id, nacimiento);
-        this.usuario = usuario;
-        this.pwd = pwd;
-        this.cargo = cargo;
-    }
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getPwd() {
-        return pwd;
-    }
-
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
-    }
-
-    public String getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
+    public MiembroMesa(String nombre, String apellido, String sexo, String departamento, String ciudad, String direccion, int id, Date nacimiento) {
+        super(nombre, apellido, sexo, departamento, ciudad, direccion, id, nacimiento);
     }
 
     @Override
